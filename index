@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal Cirurtec</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --primary:#3b82f6;
+    --secondary:#06b6d4;
+    --text:#f8fafc;
+    --muted:#94a3b8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:
+    radial-gradient(circle at top left,#1e3a8a 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#0891b2 0%,transparent 30%),
+    var(--bg);
+
+    color:var(--text);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.logo-circle{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    background:linear-gradient(135deg,#3b82f6,#06b6d4);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:40px;
+
+    box-shadow:
+    0 0 30px rgba(59,130,246,.4);
+}
+
+h1{
+    text-align:center;
+    font-size:42px;
+    margin-top:20px;
+}
+
+.subtitle{
+    text-align:center;
+    color:var(--muted);
+    margin-top:10px;
+    margin-bottom:50px;
+    font-size:18px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.card{
+    text-decoration:none;
+    color:white;
+
+    background:rgba(30,41,59,.65);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:24px;
+
+    padding:30px;
+
+    transition:.35s;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:'';
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+    );
+
+    transition:.7s;
+}
+
+.card:hover::before{
+    left:100%;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#3b82f6;
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.35),
+    0 0 20px rgba(59,130,246,.25);
+}
+
+.icon{
+    width:70px;
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+}
+
+.card h2{
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.card:hover .btn{
+    background:#3b82f6;
+}
+
+.footer{
+    text-align:center;
+    color:#64748b;
+    margin-top:50px;
+    font-size:14px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <div class="logo-circle">⚙️</div>
+
+        <h1>Portal Cirurtec</h1>
+
+        <div class="subtitle">
+            Central de Aplicativos Corporativos
+        </div>
+    </div>
+
+    <div class="grid">
+
+        <a class="card"
+           href="https://thimoteovinicius-netizen.github.io/fluidos/"
+           target="_blank">
+
+            <div class="icon">🌡️</div>
+
+            <h2>Calculadora Termodinâmica</h2>
+
+            <p>
+                Propriedades da água, pressão, temperatura,
+                vapor saturado e cálculos termodinâmicos.
+            </p>
+
+            <span class="btn">Abrir Aplicativo</span>
+
+        </a>
+
+        <a class="card"
+           href="https://thimoteovinicius-netizen.github.io/DespesasCirurtecV2/"
+           target="_blank">
+
+            <div class="icon">🚗</div>
+
+            <h2>Despesas de Viagem V2</h2>
+
+            <p>
+                Cálculo completo de deslocamentos,
+                pedágios, combustível e custos operacionais.
+            </p>
+
+            <span class="btn">Abrir Aplicativo</span>
+
+        </a>
+
+        <a class="card"
+           href="https://thimoteovinicius-netizen.github.io/Despesas-Cirurtec/"
+           target="_blank">
+
+            <div class="icon">📊</div>
+
+            <h2>Despesas Cirurtec</h2>
+
+            <p>
+                Controle financeiro simplificado
+                para operações e atendimentos externos.
+            </p>
+
+            <span class="btn">Abrir Aplicativo</span>
+
+        </a>
+
+    </div>
+
+    <div class="footer">
+        © 2026 • Portal Corporativo Cirurtec
+    </div>
+
+</div>
+
+</body>
+</html>
